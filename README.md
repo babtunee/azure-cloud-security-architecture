@@ -4,8 +4,7 @@ this is a full description on building your own cloud virtual machine and securi
 
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/babtunee/azure-cloud-security-architecture
-
+https://github.com/babtunee/azure-cloud-security-architecture/blob/master/Diagram/cloud-network-architect.png
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the repository file may be used to install only certain pieces of it, such as Filebeat.
 
   - _TODO: Enter the playbook file._
