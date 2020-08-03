@@ -5,7 +5,7 @@ this is a full description on building your own cloud virtual machine and securi
 The files in this repository were used to configure the network depicted below.
 
 https://github.com/babtunee/azure-cloud-security-architecture/blob/master/Diagram/cloud-network-architect.png
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the repository file may be used to install only certain pieces of it, such as Filebeat.
+-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the repository file may be used to install only certain pieces of it, such as Filebeat.
 
  https://github.com/babtunee/azure-cloud-security-architecture/tree/master/Ansible
 This document contains the following details:
@@ -97,8 +97,8 @@ Run the playbook, and navigate to /etc/filebeat/filebeat.yml to check that the i
 Answer the following questions to fill in the blanks:_
 filebeat-playbook.yml is the playbook and it was copy to filebeat.yml
 -Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
-Ansible-config and Ansible hosts files were updated to make Ansible run the playbook on a specific machine.
+-Ansible-config and Ansible hosts files were updated to make Ansible run the playbook on a specific machine.
 we specified which machine to installn the elk server and filebeat by spicifying the host name inside plybook.yml file
-this is the URL used to check that the ELK server is running
-http://[your.ELK-VM.External.IP]:5601/app/kibana
+-this is the URL used to check that the ELK server is running
+-http://[your.ELK-VM.External.IP]:5601/app/kibana
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
