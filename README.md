@@ -95,10 +95,15 @@ Update the ansible-config.yml file to include the elk ip address
 Run the playbook, and navigate to /etc/filebeat/filebeat.yml to check that the installation worked as expected.
 
 Answer the following questions to fill in the blanks:_
+
 filebeat-playbook.yml is the playbook and it was copy to filebeat.yml
--Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
--Ansible-config and Ansible hosts files were updated to make Ansible run the playbook on a specific machine.
+
+Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
+
+Ansible-config and Ansible hosts files were updated to make Ansible run the playbook on a specific machine.
+
 we specified which machine to installn the elk server and filebeat by spicifying the host name inside plybook.yml file
--this is the URL used to check that the ELK server is running
--http://[your.ELK-VM.External.IP]:5601/app/kibana
+
+-this is the URL used to check that the ELK server is running 
+http://[your.ELK-VM.External.IP]:5601/app/kibana
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
