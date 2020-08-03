@@ -105,5 +105,7 @@ Ansible-config and Ansible hosts files were updated to make Ansible run the play
 we specified which machine to installn the elk server and filebeat by spicifying the host name inside plybook.yml file
 
 -this is the URL used to check that the ELK server is running 
+
 http://[your.ELK-VM.External.IP]:5601/app/kibana
+
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
