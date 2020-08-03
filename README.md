@@ -25,6 +25,7 @@ Load balancing ensures that the application will be highly available, in additio
 Load balancer protect the application layer of the OSI model. one advantage of Jumpbox is that it forces all traffic through a single node.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the configuration and system application
+
 Filebeat collect data about the file system
 Metricbeat collects machine metrics such as uptime
 
@@ -77,8 +78,7 @@ https://github.com/babtunee/azure-cloud-security-architecture/blob/master/Diagra
 This ELK server is configured to monitor the following machines:
 web-1, web-2, and web-3 with ip address 10.1.0.8, 10.1.0.9, 10.1.0.10 respectively.
 
-We have installed the following Beats on these machines:
-Filebeat and Metricbeat
+We have installed the following Beats on these machines: Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
