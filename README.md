@@ -22,11 +22,11 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- Load balancer protect the application layer of the OSI model. one advantage of Jumpbox is that it forces all traffic through a single node.
+Load balancer protect the application layer of the OSI model. one advantage of Jumpbox is that it forces all traffic through a single node.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the configuration and system application
-- _TODO: What does Filebeat watch for? log monitoring
-- _TODO: What does Metricbeat record? operating system such as CPU, Memory
+Filebeat collect data about the file system
+Metricbeat collects machine metrics such as uptime
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -47,7 +47,6 @@ Only the jumpbox machine can accept connections from the Internet. Access to thi
 
 
 Machines within the network can only be accessed by jumpbox via ssh.
-- _TODO: Which machine did you allow to access your ELK VM?
 jumpbox is allows to access ELK VM with IP 10.1.0.7
 
 A summary of the access policies in place can be found in the table below.
@@ -55,17 +54,18 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box |       Yes           | 74.101.199.201       |
-|          |       No            | 10.1.0.7             |
-|          |       No            | 10.1.0.7             |
-|web-3     |       No            | 10.1.0.7
+| web-1    |       No            | 10.1.0.7             |
+| web-2    |       No            | 10.1.0.7             |
+| web-3    |       No            | 10.1.0.7
 |ELKserver |       yes           | 74.101.199.201 via 5601 
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it eliminates the chance of human error and can simplifies the process of configuring potentially thousands of machines identically all at once.
 
-The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+The playbook implements the following tasks: 
+In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image;
+we used nano 
 - ...
 - ...
 
@@ -90,13 +90,15 @@ Metricbeat periodically collects metrics from the operating system and from serv
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the file to ansible-config.yml.
-- Update the ansible-config.yml file to include username of your VMs  
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+Copy the file to filebeat-config.yml. 
+Update the ansible-config.yml file to include the elk ip address  
+Run the playbook, and navigate to /etc/filebeat/filebeat.yml to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
+Answer the following questions to fill in the blanks:_
+filebeat-playbook.yml is the playbook and it was copy to filebeat.yml
+-Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
+Ansible-config and Ansible hosts files were updated to make Ansible run the playbook on a specific machine.
+we specified which machine to installn the elk server and filebeat by spicifying the host name inside plybook.yml file
+this is the URL used to check that the ELK server is running
+http://[your.ELK-VM.External.IP]:5601/app/kibana
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
